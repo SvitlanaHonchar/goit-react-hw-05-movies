@@ -15,15 +15,7 @@ export const App = () => {
 
   // useEffect(() => {
 
-  //   const fetchMoviesCredits = async () => {
-  //     try {
-  //       const data = await requestMoviesCredits('722149');
-  //       console.log(data);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-  //   fetchMoviesCredits();
+  //
 
   //   const fetchMoviesReviews = async () => {
   //     try {

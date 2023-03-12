@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, useParams } from 'react-router-dom';
 import { requestMoviesById } from 'sevices.api/api';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Cast from './Cast';
 
 const MovieDetails = () => {
