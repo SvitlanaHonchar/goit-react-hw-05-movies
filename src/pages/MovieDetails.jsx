@@ -3,6 +3,7 @@ import { Route, Routes, useParams } from 'react-router-dom';
 import { requestMoviesById } from 'sevices.api/api';
 import { NavLink } from 'react-router-dom';
 import Cast from './Cast';
+import Reviews from './Reviews';
 
 const MovieDetails = () => {
   const { id: movieId } = useParams();
@@ -33,8 +34,11 @@ const MovieDetails = () => {
       />
       {/* images?api_key=<<api_key>>&language=en-US */}
       <NavLink to="cast">Cast</NavLink>
+      <NavLink to="reviews">Reviews</NavLink>
+
       <Routes>
         <Route path="cast" element={<Cast />}></Route>
+        <Route path="reviews" element={<Reviews />}></Route>
       </Routes>
     </div>
   );

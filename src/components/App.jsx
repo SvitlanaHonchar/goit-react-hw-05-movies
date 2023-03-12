@@ -1,33 +1,10 @@
 import Home from 'pages/Home';
 import MovieDetails from 'pages/MovieDetails';
 import Movies from 'pages/Movies';
-// import { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
-// import {
-//   requestMoviesCredits,
-//   requestMoviesReviews,
-// } from 'sevices.api/api';
-
 import { StyledNavLink } from './App.styled';
 
 export const App = () => {
-  // const [query, setQuery] = useState('popular');
-
-  // useEffect(() => {
-
-  //
-
-  //   const fetchMoviesReviews = async () => {
-  //     try {
-  //       const data = await requestMoviesReviews('722149');
-  //       console.log(data);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-  //   fetchMoviesReviews();
-  // }, []);
-
   return (
     <div
       style={{
