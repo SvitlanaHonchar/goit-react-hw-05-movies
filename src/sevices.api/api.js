@@ -41,3 +41,11 @@ export const requestMoviesReviews = async movieId => {
 
   return data;
 };
+
+// export const requestMoviesGenres = async movieId => {
+//   const { data } = await axios.get(
+//     `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`
+//   );
+
+//   return data;
+// };

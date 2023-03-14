@@ -1,10 +1,16 @@
-import Home from 'pages/Home';
-import MovieDetails from 'pages/MovieDetails';
-import Movies from 'pages/Movies';
+import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { StyledNavLink } from './App.styled';
+// import Home from 'pages/Home';
+// import MovieDetails from 'pages/MovieDetails';
+// import Movies from 'pages/Movies';
+import Header from './Header/Header';
 
-export const App = () => {
+const Home = lazy(() => import('pages/Home'));
+const MovieDetails = lazy(() => import('pages/MovieDetails'));
+const Movies = lazy(() => import('pages/Movies'));
+// const Header = lazy(() => import('./Header/Header'));
+
+const App = () => {
   return (
     <div
       style={{
@@ -18,17 +24,20 @@ export const App = () => {
       }}
     >
       {/* navigation */}
-      <nav>
-        <StyledNavLink to="/">Home</StyledNavLink>
-        <StyledNavLink to="/movies">Movies</StyledNavLink>
-      </nav>
+      {/* <Header /> */}
 
       {/* routes */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/movies" element={<Movies />} />
-        <Route path="/movies/:id/*" element={<MovieDetails />} />
-      </Routes>
+      <Suspense>
+        <Routes>
+          <Route path="/" element={<Header />}>
+            <Route index element={<Home />} />
+            <Route path="movies" element={<Movies />} />
+            <Route path="movies/:id/*" element={<MovieDetails />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </div>
   );
 };
+
+export default App;
