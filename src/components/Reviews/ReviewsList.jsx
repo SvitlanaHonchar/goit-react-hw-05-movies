@@ -1,21 +1,24 @@
 import React from 'react';
+import { StyledSection } from './ReviewsList.styled';
 
 const ReviewsList = ({ reviews }) => {
   return (
-    <ul>
-      {reviews.length > 0 ? (
-        reviews.map(review => {
-          return (
-            <li key={review.id}>
-              {review.author}
-              <p>{review.content}</p>
-            </li>
-          );
-        })
-      ) : (
-        <p>no reviews for the movie</p>
-      )}
-    </ul>
+    <StyledSection>
+      <ul>
+        {reviews.length > 0 ? (
+          reviews.map(review => {
+            return (
+              <li key={review.id}>
+                <span className="author">{review.author}</span>
+                <p className="content">{review.content}</p>
+              </li>
+            );
+          })
+        ) : (
+          <p>no reviews for the movie</p>
+        )}
+      </ul>
+    </StyledSection>
   );
 };
 

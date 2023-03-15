@@ -1,15 +1,18 @@
 import React from 'react';
 import emptypicture from '../../images/emptypicture.png';
+import { StyledUl } from './CastList.styled';
 
 const CastList = ({ castMembers }) => {
   return (
     <>
-      <ul>
+      <StyledUl>
         {castMembers.map(castMember => {
           return (
             <li key={castMember.id}>
               <h3>{castMember.name}</h3>
-              <p>{castMember.character}</p>
+              <p>
+                <i>{castMember.character}</i>
+              </p>
               {castMember.profile_path === null ? (
                 <img src={emptypicture} alt="empty" width="150" />
               ) : (
@@ -22,7 +25,7 @@ const CastList = ({ castMembers }) => {
             </li>
           );
         })}
-      </ul>
+      </StyledUl>
     </>
   );
 };

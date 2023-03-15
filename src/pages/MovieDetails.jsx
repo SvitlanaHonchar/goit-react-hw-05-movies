@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { Route, Routes, useLocation, useParams } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import { requestMoviesById } from 'sevices.api/api';
 import { BackLink } from 'components/BackLink/BackLink';
 import MovieCard from 'components/MovieCard/MovieCard';
@@ -28,17 +28,17 @@ const MovieDetails = () => {
   };
 
   return (
-    <div>
-      <BackLink to={location?.state?.from ?? '/'}>Go back</BackLink>
+    <>
+      <BackLink to={location?.state?.from ?? '/'}>⬅ Go back</BackLink>
 
       <MovieCard movie={movie} />
 
-      <NavLink state={{ from: location?.state?.from }} to="cast">
+      {/* <NavLink state={{ from: location?.state?.from }} to="cast">
         Cast
       </NavLink>
       <NavLink state={{ from: location?.state?.from }} to="reviews">
         Reviews
-      </NavLink>
+      </NavLink> */}
 
       <Suspense>
         <Routes>
@@ -46,7 +46,7 @@ const MovieDetails = () => {
           <Route path="reviews" element={<Reviews />}></Route>
         </Routes>
       </Suspense>
-    </div>
+    </>
   );
 };
 

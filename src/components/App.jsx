@@ -17,9 +17,9 @@ const App = () => {
         // height: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 24,
+        // justifyContent: 'center',
+        // alignItems: 'center',
+        fontSize: 22,
         color: '#010101',
       }}
     >

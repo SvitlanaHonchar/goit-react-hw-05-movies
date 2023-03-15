@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { StyledForm } from './SearchForm.styled';
 
 const SearchForm = ({ onSubmit }) => {
   const [query, setQuery] = useState('');
@@ -24,7 +25,7 @@ const SearchForm = ({ onSubmit }) => {
   };
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <StyledForm onSubmit={handleSubmit}>
         <input
           type="text"
           name="query"
@@ -34,7 +35,7 @@ const SearchForm = ({ onSubmit }) => {
           autoFocus
         />
         <button type="submit">Search</button>
-      </form>
+      </StyledForm>
     </>
   );
 };
