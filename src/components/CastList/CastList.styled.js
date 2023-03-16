@@ -4,7 +4,6 @@ export const StyledUl = styled.ul`
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  /* justify-content: space-around; */
 
   & li {
     display: flex;
@@ -17,7 +16,6 @@ export const StyledUl = styled.ul`
     background-color: #f0f0f0;
 
     list-style: none;
-    /* border: solid gray 1px; */
     box-shadow: 3px 3px 3px #d6d6d6;
 
     border-radius: 5px;

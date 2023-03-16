@@ -9,8 +9,11 @@ export const StyledSection = styled.section`
     font-size: 22px;
   }
 
+  & li {
+    list-style: square;
+  }
+
   & a {
     text-decoration: none;
-    /* font-size: 22px; */
   }
 `;

@@ -5,6 +5,5 @@ export const StyledSection = styled.section`
 
   & a {
     text-decoration: none;
-    /* font-size: 22px; */
   }
 `;

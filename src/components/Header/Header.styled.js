@@ -21,6 +21,5 @@ export const StyledNavLink = styled(NavLink)`
 
 export const StyledHeader = styled.header`
   padding: 10px;
-  /* border-bottom: solid 1px gray; */
   box-shadow: 0px 3px 3px #d6d6d6;
 `;
