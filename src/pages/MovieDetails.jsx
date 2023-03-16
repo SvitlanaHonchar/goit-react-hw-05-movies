@@ -1,17 +1,8 @@
-import React, { useState, useEffect, Suspense, lazy } from 'react';
-import {
-  Outlet,
-  Route,
-  Routes,
-  useLocation,
-  useParams,
-} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Outlet, useLocation, useParams } from 'react-router-dom';
 import { requestMoviesById } from 'sevices.api/api';
 import { BackLink } from 'components/BackLink/BackLink';
 import MovieCard from 'components/MovieCard/MovieCard';
-
-const Cast = lazy(() => import('./Cast'));
-const Reviews = lazy(() => import('./Reviews'));
 
 const MovieDetails = () => {
   const { id: movieId } = useParams();
